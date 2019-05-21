@@ -1,0 +1,55 @@
+* {
+  font-family: Segoe UI;
+}
+
+body {
+  // background-image: url("../img/vlag.svg.png");
+}
+
+.app {
+  background-repeat: repeat-y;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  &__card {
+    padding: 1em;
+    height: 33vh;
+    font-size: 1.5em;
+    box-shadow: 0 0 5px black;
+    padding-bottom: 1em;
+    &[class$="__title--second"] {
+      color: white;
+    }
+  }
+  &__card:nth-of-type(1n) {
+    background-color: $yellow;
+    p {
+      background: -webkit-linear-gradient($red, $blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  &__card:nth-of-type(3n) {
+    background-color: $blue;
+    p {
+      background: -webkit-linear-gradient($yellow, $red);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  &__card:nth-of-type(2n) {
+    background-color: $red;
+    p {
+      background: -webkit-linear-gradient($blue, $yellow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  img {
+  }
+}
+
+img {
+  width: 100%;
+  animation: colorrotate 15s linear infinite;
+}
