@@ -42,3 +42,5 @@ This whole subject was process of learning the restrictions of css. While workin
 - More gradients!!! 🔴🔵🔴 Found a way to give text a gradient. It's a bit of a hack, but with a `-webkit-background-clip:text;` and `-webkit-text-fill-color:transparent;`, you can gradient the background and "fill" the text with that color. [Source.](https://css-tricks.com/snippets/css/gradient-text/)
 
 - Using `filter:hue-rotate()` on a image gives some awesome trippy effects!
+
+- Using `pointer-events : none;` to make hover events work through a fixed image.
