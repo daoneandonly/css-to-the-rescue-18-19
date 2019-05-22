@@ -43,7 +43,6 @@ body {
   }
   &__card:nth-of-type(3n) {
     background-color: $blue;
-    margin-bottom: 5em;
     p:hover {
       background: -webkit-linear-gradient($yellow, $red);
       -webkit-background-clip: text;
@@ -82,5 +81,16 @@ iframe {
 img {
   width: 100%;
   animation: colorrotate 15s linear infinite;
-  margin-bottom: 5em;
+  margin: 5em 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+label {
+  margin: auto;
+  width: 5em;
 }
