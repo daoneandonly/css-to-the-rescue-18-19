@@ -9,6 +9,8 @@
   </head>
   <body>
     <header>
+      <label for="trip">Enable trip</label>
+      <input type="checkbox" value="" id="trip" />
       <svg
         version="1.1"
         id="Layer_1"
@@ -65,7 +67,6 @@
         />
       </svg>
     </header>
-
     <main class="app">
       <section class="app__card">
         <h1 id="northholland" class="app__card__title--first">North Holland</h1>
@@ -167,7 +168,7 @@
       </section>
 
       <section class="app__card">
-        <h3 id="urbanisationandeconomicgrowth1840totoday">
+        <h3 class="app__card__title--third">
           Urbanisation and economic growth (1840 to today)
         </h3>
         <p>
@@ -192,8 +193,9 @@
           would be the largest in the Netherlands in both area and population.
         </p>
       </section>
+      <img src="src/img/hoorn.jpg" alt="A photo of the city Hoorn" />
       <section class="app__card">
-        <h3 id="geography">Geography</h3>
+        <h3 class="app__card__title--third">Geography</h3>
 
         <p>
           North Holland is situated at 52°40′N 4°50′E in the northwest of the
@@ -217,8 +219,15 @@
           code ISO 3166-2:NL-NH.
         </p>
       </section>
+      <iframe
+        class="youtube"
+        src="https://www.youtube.com/embed/v_5h6KIGe90?mute=1"
+        frameborder="0"
+        allow="accelerometer; encrypted-media; gyroscope; <pict></pict>ure-in-picture"
+        allowfullscreen
+      ></iframe>
       <section class="app__card">
-        <h3 id="municipalities">Municipalities</h3>
+        <h3 class="app__card__title--third">Municipalities</h3>
 
         <p>
           As of January 2019, North Holland is divided into 47 municipalities
@@ -238,6 +247,7 @@
           Helder and Heerhugowaard).
         </p>
       </section>
+      <img src="src/img/amsterdam.jpg" alt="Photo of Amsterdam" />
       <!--
         <img src="src/img/nh-left.svg" class="nh nh-left" alt="" />
         <p>
@@ -261,9 +271,10 @@
         <img src="src/img/nh-right.svg" class="nh nh-right" alt="" />
       -->
     </main>
-    <img src="src/img/hoorn.jpg" alt="" />
-    <img src="src/img/amsterdam.jpg" alt="" />
-    <img src="src/img/broekinwaterland.jpg" alt="" />
+    <img
+      src="src/img/broekinwaterland.jpg"
+      alt="Photo of Broek in Water land"
+    />
     <script src="src/js/script.js"></script>
   </body>
 </html>

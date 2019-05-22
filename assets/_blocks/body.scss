@@ -9,47 +9,78 @@ body {
 .app {
   background-repeat: repeat-y;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
   &__card {
+    width: 70%;
     padding: 1em;
-    height: 33vh;
+    min-height: 33vh;
     font-size: 1.5em;
-    box-shadow: 0 0 5px black;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
     padding-bottom: 1em;
-    &[class$="__title--second"] {
+    & [class*="__title--second"],
+    [class*="__title--first"],
+    [class*="__title--third"] {
       color: white;
     }
   }
-  &__card:nth-of-type(1n) {
+  & p {
+    padding: 1em 0em;
+  }
+  &__card:nth-of-type(3n -2) {
     background-color: $yellow;
-    p {
+    p:hover {
       background: -webkit-linear-gradient($red, $blue);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      &:nth-of-type(2n) {
+        background: -webkit-linear-gradient($blue, $red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
   &__card:nth-of-type(3n) {
     background-color: $blue;
-    p {
+    margin-bottom: 5em;
+    p:hover {
       background: -webkit-linear-gradient($yellow, $red);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      &:nth-of-type(2n) {
+        background: -webkit-linear-gradient($red, $yellow);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
-  &__card:nth-of-type(2n) {
+  &__card:nth-of-type(3n -1) {
     background-color: $red;
-    p {
+    p:hover {
       background: -webkit-linear-gradient($blue, $yellow);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      &:nth-of-type(2n) {
+        background: -webkit-linear-gradient($yellow, $blue);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
   img {
   }
 }
 
+iframe {
+  width: 100%;
+  height: 100vh;
+  animation: colorrotate 15s linear infinite;
+  margin: 5em 0;
+}
+
 img {
   width: 100%;
   animation: colorrotate 15s linear infinite;
+  margin-bottom: 5em;
 }
